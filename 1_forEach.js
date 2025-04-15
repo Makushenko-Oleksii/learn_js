@@ -1,4 +1,4 @@
- //Junior
+//Junior
 
 // 1.Дан массив чисел. Используя forEach, выведите каждый элемент массива в консоль.
 
@@ -55,17 +55,49 @@ arr7 = [
 ]
 
 arr7.forEach(item => {
-   item.value= item.value + item.id
+    item.value = item.value + item.id
 });
 
 console.log(arr7);
 
-// 2. Дан массив строк. Верните массив объектов {text: строка, length: число}, где length — длина строки.
+// 3. Дан массив строк. Верните массив объектов {text: строка, length: число}, где length — длина строки.
 
- let arr8 = ['some', 'comeni', 'romen', 'done'];
- let newArr = [];
- arr8.forEach((item) => {
-     newArr.push({text: item, length : item.length})
+let arr8 = ['some', 'comeni', 'romen', 'done'];
+let newArr = [];
+arr8.forEach((item) => {
+    newArr.push({text: item, length: item.length})
 
- })
- console.log(newArr)
+})
+console.log(newArr);
+
+// 4. Дан массив чисел. Используя forEach, найдите максимальное значение и выведите его.
+let arr9 = [2, 23, 5, 16, 8, 9];
+let minValue = arr9[0];
+arr9.forEach(item => {
+    minValue = Math.max(minValue, item);
+});
+
+console.log(`Максимальное число в массиве - ${minValue}`);
+
+// 5. Дан массив объектов {name: string, age: number}. Выведите только имена тех, чей возраст больше 18.
+
+let users = [
+    {name: 'Alex', age: 15},
+    {name: 'Palex', age: 19},
+    {name: 'Talex', age: 16},
+    {name: 'Balex', age: 24}
+]
+
+let countUsers = 0;
+
+users.forEach(user => {
+    if (user.age > 18) {
+        countUsers++;
+        console.log(`Есть ${countUsers} пользователь больше 18, это - ${user.name} и ему ${user.age}`);
+    }
+});
+
+//Senior
+
+// 1. Дан массив чисел. Используя forEach, реализуйте алгоритм подсчета частоты каждого числа и верните результат как Map.
+
