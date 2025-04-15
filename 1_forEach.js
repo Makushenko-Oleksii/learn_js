@@ -1,4 +1,5 @@
-//Junior
+ //Junior
+
 // 1.Дан массив чисел. Используя forEach, выведите каждый элемент массива в консоль.
 
 let arr = [2, 3, 5, 6, 8, 9];
@@ -31,6 +32,7 @@ let res = 0;
 arr5.forEach(item => console.log(res += item));
 
 //Middle
+
 // 1. Дан массив чисел. Используя forEach, создайте новый массив, содержащий только четные числа.
 let arr6 = [2, 3, 5, 6, 8, 9];
 let evenArr = [];
@@ -58,3 +60,12 @@ arr7.forEach(item => {
 
 console.log(arr7);
 
+// 2. Дан массив строк. Верните массив объектов {text: строка, length: число}, где length — длина строки.
+
+ let arr8 = ['some', 'comeni', 'romen', 'done'];
+ let newArr = [];
+ arr8.forEach((item) => {
+     newArr.push({text: item, length : item.length})
+
+ })
+ console.log(newArr)
